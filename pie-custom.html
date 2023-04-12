@@ -1,0 +1,152 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=pie-custom&code=PYBwLglsB2AEC8sDeAoWsBGBDAxgawHMAnYAV2gBMBhYAG2CIC5YByAYgCYcBmAFm5wsANGliQwtAKbNU6dGEkAPMMxaBT90BycoAQGQOBygZ_NAZnKAjNMCIDIA-3QM6KgPbVAKt4QQgBnVAAuqB9v0CF0cNHopAMxWtfME85WABnUgwFZVUAKlhANz1APXTAGO1AC0V3QBh_wDm5QBAVQCo5QDvUwAyMwGg5QDZTQDG0gEYATg5uPJtACQsAHWg24LkwUGYOAAYREKiwAGUwAE8pGS85HDoGVTYcZZYZgF9RNcGxYDpIEGmhoggCAkkmVggFAFtO9B8Ga6wwBQuWJCw12AAeDCIAegAfEgMF8ZDgvgAKJAUNYAUgAlKt0FtRAA3CDhLC0ACyWAOyBmoQAFsAAO7MHzY0KSbboa4QaDMKp02BPRTMgAcnNZjIASlhoGdDiFYHN6EQADInYlgaCSUKhZgAbQGsD6ADoAGwAXXWm22NOOCpVM1kougWGu0kuIDuXXGIBtLBAEEk9vQRCwFAgpCVrAArAG4R6xZJoK8VSwA30Q0JA7GWDrWegKM8sKbRXIkLA0djSDaqtwtfHLdbVIB0ZUANXIsWCorPoHN52gFrk82Bl52Afz1ADhytfrDab-ZtWpZHatzsA-jaAf0j-yns7nh8yAOylieqQAYroBggLnMxCQ5bhfbndUgEpNQCktruG8hF4fmfw1-XWIBHHT7A6zB9bsCqHFX46fLCToA80EsO-oqfoW3Dxv-zqAKyxgB7uqB86NreX6cmOnawKogDbaoAu7pIXuC7Nl-VRVGqJ6sIAzTYVgR14QcwvCPs6gBU5motGDqhNp_hRLCAIHagDwmuxH6ccwy5QTBqiAKpps5gfuImwJy4k8YAanaAOrKQngfJVTceurCAO626myURS6wLwJYSawgCziYAYXoaXJxE2nwTGqIAoYqAJkhgAnynZxl3rAy4cM5rDKTRRkoQ5ok6QBgCatpO3lhSZ9SBSwXYychN7hbA3BKbpLCAIt5gCZ-bFoXpSZWoBRZLCAL3xvFxSVvlZUlgCJcoZaX0bAWrkTlgDxnoAX3q1W1Wo1ElgBQcnp_XybwGE5YAkCqAOnm40ZaRU0AZRLWEfFvmkUlgBx_oAv2oLSZy3OoA7fr7cVbXlTxgC0crtgAPyoAfnYHb55nXbtgCZmYA9HZPSRx45YADaaAGGu32FklgDhpoAjcHA8ySWAJfpZ2tfJl05YABUqAP9GgDkmlD7VDRVgCR2oAvfpY0jAF_cjgCG6ljR2qIAzfbo4AlEqAFlylNJTd1OABepWOjklz6petdVfsTzqAErpY3nfJ2UAYAj0Hw3zhE6hqoQMGAkI-OQOCQDAsCQlg8YYAihLXkQkhgKQRBwFgGoObAAC0mCW8OADchFrAi84kDSAAqjrOl6Pp-qGtBYBgki0CKWbigsrBEAQ2CQhwQbxvHAaJwn6oatwSLO_OgfB7Q0rymHoq0IykhjJMNrmteEdvNHsdJynyewPXacZ8iDbFaE1y7GAxLMJqAV81IQo98yAyD-GBA9xwvR9FnhFXJI1xl1MBsNtXiw4PUAbcFUoboCS3rkgAQi2Fz9GP14HxQ5I0BKqi11gkJqs_8aagGmdZkZgoQE8GvQF7TpVChBwNid085v6_ygNAAAolgUIjICCqBDnAyAOAADypAgjgOgD_Z4UCAAiyDxiUjVn_LWEAKCKH1pXUURsTZm1gHiHuGovSUGANcSE-s4jnydp_fU6A9RrAdkAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  backgroundColor: '#2c343c',
+  title: {
+    text: '知乎【万柳书院】相关回答ip地址统计',
+    left: 'left',
+    subtext: '* 并非完全统计，从各个问题下收集1923个答案\n\n',
+    top: 20,
+    textStyle: {
+      color: '#ccc'
+    }
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{a} <br/>{b} : {c} ({d}%)'
+  },
+  visualMap: {
+    show: false,
+    min: 1,
+    max: 188,
+    inRange: {
+      colorLightness: [0, 0.6]
+    }
+  },
+  series: [
+    {
+      name: 'ip',
+      type: 'pie',
+      radius: '55%',
+      center: ['50%', '50%'],
+      data: [
+        { value: 136, name: '北京' },
+        { value: 188, name: '广东' },
+        { value: 61, name: '江西' },
+        { value: 17, name: '甘肃' },
+        { value: 18, name: '天津' },
+        { value: 143, name: '山东'},
+        { value: 127, name: '江苏'},
+        { value: 13,  name: '贵州'},
+        { value: 81, name : '四川'},
+        { value: 110, name: '河北'},
+        { value: 4, name: '未知'},
+        { value: 7, name: '宁夏'},
+        { value: 73, name: '陕西'},
+        { value: 83, name: '湖南'},
+        { value: 17, name: '海南'},
+        { value: 46, name: '重庆'},
+        { value: 34, name: '内蒙古'},
+        { value: 72, name: '湖北'},
+        { value: 77, name: '浙江'},
+        { value: 23, name: '广西'},
+        { value: 33, name: '黑龙江'},
+        { value: 62, name: '辽宁'},
+        { value: 33, name: '云南'},
+        { value: 60, name: '福建'},
+        { value: 69, name: '上海'},
+        { value: 41, name: '吉林'},
+        { value: 111, name: '河南'},
+        { value: 11, name: '美国'},
+        { value: 1, name: '德国'},
+        { value: 2, name: '中国台湾'},
+        { value: 6, name: '中国香港'},
+        { value: 18, name: '新疆'},
+        { value: 1, name: '文莱'},
+        { value: 1, name: '韩国'},
+        { value: 2, name: '加拿大'},
+        { value: 69, name: '安徽'},
+        { value: 2, name: '新加坡'},
+        { value: 1, name: '澳大利亚'},
+        { value: 1, name: '中国澳门'},
+        { value: 61, name: '山西'},
+        { value: 2, name: '青海'},
+        { value: 3, name: '英国'},
+        
+      ].sort(function (a, b) {
+        return a.value - b.value;
+      }),
+      roseType: 'radius',
+      label: {
+        color: 'rgba(255, 255, 255, 0.3)'
+      },
+      labelLine: {
+        lineStyle: {
+          color: 'rgba(255, 255, 255, 0.3)'
+        },
+        smooth: 0.2,
+        length: 10,
+        length2: 20
+      },
+      itemStyle: {
+        color: '#c23531',
+        shadowBlur: 200,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+      },
+      animationType: 'scale',
+      animationEasing: 'elasticOut',
+      animationDelay: function (idx) {
+        return Math.random() * 200;
+      }
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
